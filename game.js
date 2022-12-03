@@ -13,11 +13,12 @@ var userPattern = [];
 // 6. loop
 
 
-// start the game if a button is pressed.
-$(document).keydown(function() {
+// start the game if touched.
+$('#startWindow').click(function() {
   if (!isStarted) {
     nextSequence();
     isStarted = true;
+    $('#startWindow').addClass('hidden');
   }
 });
 
@@ -49,12 +50,13 @@ function restartGame() {
 }
 
 function gameOver() {
-  $('h1').text('Game Over, Press Any Key to Restart');
+  $('h1').text('Game Over, Touch to Restart');
   playSound('wrong');
   $('body').addClass('game-over');
   setTimeout(function() {
     $('body').removeClass('game-over');
   }, '200');
+  $('#startWindow').removeClass('hidden');
 }
 
 function nextSequence() {
