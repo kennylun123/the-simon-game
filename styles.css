@@ -51,3 +51,16 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+
+.hidden {
+  display: none;
+}
+
+.touchStart {
+  /* background: red; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
